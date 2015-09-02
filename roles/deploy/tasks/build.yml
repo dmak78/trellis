@@ -1,5 +1,5 @@
 ---
-- include: "{{ project_deploy_hook_pre_build | default('../hooks/example.yml') }}"
+- include: "{{ deploy_build_before | default('../hooks/example.yml') }}"
 
 - name: Copy project local files
   synchronize:
@@ -17,4 +17,4 @@
     mode: "{{ item.mode | default('0644') }}"
   with_items: project_templates
 
-- include: "{{ project_deploy_hook_post_build | default('../hooks/post_build.yml') }}"
+- include: "{{ deploy_build_after | default('../hooks/build-after.yml') }}"

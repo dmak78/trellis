@@ -4,19 +4,19 @@
 # tl;dr
 #   1. create a tasks file you wish to include on a certain hook
 #
-#   2. set the "project_deploy_hook_<pre/post>_<hook>" variable to
+#   2. set the "deploy_<hook>_<before|after>" variable to
 #       "{{ playbook_dir }}/path/to/tasks-file.yml"
 #
 #  Available hooks:
-#    - project_deploy_hook_pre_initialize
-#    - project_deploy_hook_post_initialize
-#    - project_deploy_hook_pre_update
-#    - project_deploy_hook_post_update
-#    - project_deploy_hook_pre_prepare
-#    - project_deploy_hook_post_prepare
-#    - project_deploy_hook_pre_build
-#    - project_deploy_hook_post_build
-#    - project_deploy_hook_pre_share
-#    - project_deploy_hook_post_share
-#    - project_deploy_hook_pre_finalize
-#    - project_deploy_hook_post_finalize
+#    - deploy_initialize_before
+#    - deploy_initialize_after
+#    - deploy_update_before
+#    - deploy_update_after
+#    - deploy_prepare_before
+#    - deploy_prepare_after
+#    - deploy_build_before
+#    - deploy_build_after
+#    - deploy_share_before
+#    - deploy_share_after
+#    - deploy_finalize_before
+#    - deploy_finalize_after
